@@ -2,11 +2,13 @@ package com.authboard.demo.board.service;
 
 import com.authboard.demo.board.dto.BoardDto;
 import com.authboard.demo.board.mapper.BoardMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 public class BoardServiceImpl implements BoardService {
 
@@ -34,9 +36,7 @@ public class BoardServiceImpl implements BoardService {
     public BoardDto selectBoardDetail(int idx) throws Exception{
         boardMapper.updateHitCount(idx);
 
-        BoardDto board = boardMapper.selectBoardDetail(idx);
-
-        return board;
+        return boardMapper.selectBoardDetail(idx);
     }
 
     @Override
