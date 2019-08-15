@@ -4,7 +4,7 @@
 
   - CRUD 구현 : 완료
   - Logback 설정 : 완료
-  - Intercepter 추가
+  - Interceptor 추가 : 완료
   - AOP, Transaction
   - 파일 업로드 / 다운로드
   - REST API
