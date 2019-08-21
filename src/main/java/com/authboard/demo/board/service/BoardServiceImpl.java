@@ -12,8 +12,6 @@ import java.util.List;
 @Service
 public class BoardServiceImpl implements BoardService {
 
-    @Autowired
-    private BoardMapper boardMapper;
     /*
     At this moment, boardMapper is not registered as bean yet.
     So IDE tell you it is not bean so that you can't use @Autowired
@@ -21,6 +19,9 @@ public class BoardServiceImpl implements BoardService {
 
     See also here : https://okky.kr/article/451576
     */
+
+    @Autowired
+    private BoardMapper boardMapper;
 
     @Override
     public List<BoardDto> selectBoardList() throws Exception{
