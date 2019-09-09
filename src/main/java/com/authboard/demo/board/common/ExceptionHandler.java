@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 public class ExceptionHandler {
 
     @org.springframework.web.bind.annotation.ExceptionHandler(Exception.class)
-    public ModelAndView defaultExceptionHandler(Exception exception){
+    public ModelAndView defaultExceptionHandler(HttpServletRequest request, Exception exception){
 
         ModelAndView mv = new ModelAndView("/error/error_default");
         mv.addObject("exception", exception);
